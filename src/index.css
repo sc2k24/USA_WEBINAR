@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71.4% 4.1%; /* Dark Blue */
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 350 78.9% 52.9%; /* Red */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 350 78.9% 52.9%; /* Red for ring */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.usa-gradient-bg {
+  background: linear-gradient(135deg, #0A192F 0%, #172A46 50%, #2A3F5F 100%); /* Dark blue shades */
+}
+
+.usa-text-gradient {
+  background: linear-gradient(90deg, #EF4444 0%, #F87171 50%, #DC2626 100%); /* Red shades */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect-usa {
+  background: rgba(10, 25, 47, 0.6); /* Darker blue for glass effect */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(239, 68, 68, 0.2); /* Subtle red border */
+}
+
+.button-primary-usa {
+  @apply bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+}
+
+.button-secondary-usa {
+  @apply bg-transparent border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out;
+}
+
+.alert-banner {
+  @apply bg-red-700 text-white p-3 text-center font-semibold;
+}
+
+.countdown-item {
+  @apply flex flex-col items-center justify-center bg-slate-800/50 p-4 rounded-lg shadow-md min-w-[70px] md:min-w-[90px];
+}
+.countdown-value {
+  @apply text-3xl md:text-4xl font-bold text-red-400;
+}
+.countdown-label {
+  @apply text-xs md:text-sm text-slate-300 uppercase;
+}
+
+.faq-item {
+  @apply bg-slate-800/30 p-4 rounded-lg;
+}
+.faq-question {
+  @apply flex justify-between items-center w-full text-left font-semibold text-lg cursor-pointer;
+}
+.faq-answer {
+  @apply mt-2 text-slate-300;
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.pulse-glow-red {
+  animation: pulse-glow-red 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow-red {
+  from { box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+  to { box-shadow: 0 0 30px rgba(239, 68, 68, 0.7); }
+}
