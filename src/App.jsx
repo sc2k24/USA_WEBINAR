@@ -17,7 +17,7 @@ import AlertBanner from '@/components/AlertBanner';
 // import Contact from './pages/Contact';
 function App() {
   const { toast } = useToast();
-  const webinarDate = "2025-06-17T19:00:00";
+  const webinarDate = "2025-08-31T19:00:00";
   const webinarPrice = 399;
   const [registrations, setRegistrations] = useState([]);
   const [isRegistered, setIsRegistered] = useState(false);
